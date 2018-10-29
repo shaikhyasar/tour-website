@@ -1,0 +1,27 @@
+{
+  "name": "natour",
+  "version": "1.0.0",
+  "description": "Tour Desination Website",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass",
+
+
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+    "concat:sass": "concat -o css/style.concat.css css/icon-font.css css/style.comp.css",
+    "prefix:sass": "postcss --use autoprefixer -b 'last 10 versions' css/style.concat.css -o css/style.prefix.css"
+   
+
+  },
+  "author": "yasar",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.3.1",
+    "concat": "^1.0.3",
+    "node-sass": "^4.9.4",
+    "npm-run-all": "^4.1.3",
+    "postcss-cli": "^6.0.1"
+  }
+}
